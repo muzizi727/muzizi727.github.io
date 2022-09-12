@@ -16,22 +16,22 @@
   <meta name="author" content="Lyice">
   <meta name="keywords" content="">
   
-    <meta name="description" content="第一篇博客欢迎来到Lyice’s的博客 写在最前面本人从2017年底开始实习到现在已经工作好几年了，但是发现自己主要是在写一些偏业务上的代码。期间也跟着视频或者文章学过一些新的技术栈，但是一般都是跟着视频实践，没有真正应用到项目中。加上看过之后长时间用不到，感觉学了没多久就忘记了。所以一直想写一个博客记录下来，但是基于各种原因一直拖延到现在。加上之前想着多写几篇一起发，但是电脑坏了重装系统后写的文">
+    <meta name="description" content="Java中的字符串Java提供了String、StringBuffer和StringBuilder类来封装字符串，并提供了一系列操作字符串对象的方法。它们的相同点都是用来封装字符串；并且都实现了CharSequence接口。 StringString类的value数组被声明为final，这意味着value数组初始化之后不能再引用其他数组，并且String内部没有改变value数组的方法，因此可以保">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇博客">
-<meta property="og:url" content="http://example.com/2022/09/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="Java中的字符串">
+<meta property="og:url" content="http://example.com/2022/09/12/Java%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
 <meta property="og:site_name" content="Lyice&#39;s Blog">
-<meta property="og:description" content="第一篇博客欢迎来到Lyice’s的博客 写在最前面本人从2017年底开始实习到现在已经工作好几年了，但是发现自己主要是在写一些偏业务上的代码。期间也跟着视频或者文章学过一些新的技术栈，但是一般都是跟着视频实践，没有真正应用到项目中。加上看过之后长时间用不到，感觉学了没多久就忘记了。所以一直想写一个博客记录下来，但是基于各种原因一直拖延到现在。加上之前想着多写几篇一起发，但是电脑坏了重装系统后写的文">
+<meta property="og:description" content="Java中的字符串Java提供了String、StringBuffer和StringBuilder类来封装字符串，并提供了一系列操作字符串对象的方法。它们的相同点都是用来封装字符串；并且都实现了CharSequence接口。 StringString类的value数组被声明为final，这意味着value数组初始化之后不能再引用其他数组，并且String内部没有改变value数组的方法，因此可以保">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-10T08:16:33.000Z">
-<meta property="article:modified_time" content="2022-09-10T08:56:34.385Z">
+<meta property="article:published_time" content="2022-09-12T14:10:49.000Z">
+<meta property="article:modified_time" content="2022-09-12T14:30:10.683Z">
 <meta property="article:author" content="Lyice">
-<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="Java基础">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>第一篇博客 - Lyice&#39;s Blog</title>
+  <title>Java中的字符串 - Lyice&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="第一篇博客"></span>
+            <span id="subtitle" data-typed-text="Java中的字符串"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-10 16:16" pubdate>
-          2022年9月10日 下午
+        <time datetime="2022-09-12 22:10" pubdate>
+          2022年9月12日 晚上
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          536 字
+          1.9k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          5 分钟
+          16 分钟
         
       </span>
     
@@ -268,25 +268,64 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">第一篇博客</h1>
+            <h1 style="display: none">Java中的字符串</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><p>欢迎来到Lyice’s的博客</p>
-<h2 id="写在最前面"><a href="#写在最前面" class="headerlink" title="写在最前面"></a>写在最前面</h2><p>本人从2017年底开始实习到现在已经工作好几年了，但是发现自己主要是在写一些偏业务上的代码。期间也跟着视频或者文章学过一些新的技术栈，但是一般都是跟着视频实践，没有真正应用到项目中。加上看过之后长时间用不到，感觉学了没多久就忘记了。所以一直想写一个博客记录下来，但是基于各种原因一直拖延到现在。加上之前想着多写几篇一起发，但是电脑坏了重装系统后写的文章都没了，所以改变了一下思路，想着每写一个文章就发一篇。</p>
-<p>同时写博客也是达到一个自我驱动的目的，本人平时就是间接性踌躇满志，持续性混吃等死的状态。所以也希望通过写博客能让自己坚持持续的学习。</p>
-<p>最后我并未将此地址告知任何人，也暂时不打算这么做。</p>
-<h2 id="当下情况"><a href="#当下情况" class="headerlink" title="当下情况"></a>当下情况</h2><p>目前的技术足够应付日常的开发情况，但是想要更进一步写出简单易懂、效率高、拓展性好的代码还是比较吃力。加上国内的就业形势，为了以后不被优化，计划利用每周空闲时间来给自己充电学习。持续的提高自己的不可替代性。</p>
-<h2 id="近期计划"><a href="#近期计划" class="headerlink" title="近期计划"></a>近期计划</h2><ul>
-<li>从java基础开始梳理一下，然后通过博客记录下来</li>
-<li>梳理完java基础之后重点看下java并发</li>
-<li>在不加班的情况下保持周更博客</li>
+                <h1 id="Java中的字符串"><a href="#Java中的字符串" class="headerlink" title="Java中的字符串"></a>Java中的字符串</h1><p>Java提供了<code>String</code>、<code>StringBuffer</code>和<code>StringBuilder</code>类来封装字符串，并提供了一系列操作字符串对象的方法。它们的相同点都是用来封装字符串；并且都实现了<code>CharSequence</code>接口。</p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p><code>String</code>类的<code>value</code>数组被声明为<code>final</code>，这意味着<code>value</code>数组初始化之后不能再引用其他数组，并且<code>String</code>内部没有改变<code>value</code>数组的方法，因此可以保证<code>String</code>不可变，同时保证线程安全。<code>String</code>类被声明为<code>final</code>，因此不可被继承。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">String</span><br>    <span class="hljs-keyword">implements</span> <span class="hljs-title class_">java</span>.io.Serializable, Comparable&lt;String&gt;, CharSequence &#123;<br>    <span class="hljs-comment">/** The value is used for character storage. */</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-type">char</span> value[];<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>注：</strong>不可变的意思是每次更改都会产生新的字符串。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">s</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;a&quot;</span>; <br>s += <span class="hljs-string">&quot;b&quot;</span>;<br></code></pre></td></tr></table></figure>
+
+<p>以上代码会线程一个字符串”a”对象，并且s指向该对象。然后再生成一个字符串”ab”对象，把s的指向地址改为”ab”对象。</p>
+<h2 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer"></a>StringBuffer</h2><p><code>StringBuffer</code>为字符串变量（线程安全），如果要频繁的对字符串内容进行修改，处于效率考虑最好使用可<code>StringBuffer</code>，如果想转成<code>String</code>类型，可以调用<code>StringBuffer.toString()</code>方法。</p>
+<p><code>StringBuffer</code>上的主要操作是<code>append</code>和<code>insert</code>方法，可重载这些方法以接受任意类型的数据。每个方法都能有效的将给定的数据转换成字符串，然后将该字符串的字符添加或者插入到字符串缓冲区中。</p>
+<ul>
+<li><code>append</code>方法始终将这些字符添加到缓冲区的末端</li>
+<li><code>insert</code>方法则在指定的位置添加字符</li>
 </ul>
-<h2 id="未来方向"><a href="#未来方向" class="headerlink" title="未来方向"></a>未来方向</h2><p>争取通过自己的努力进一个自研、不加班的公司。</p>
-<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><blockquote>
-<p> <strong>种一棵树最好的时间是十年前，其次是现在</strong></p>
-</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">StringBuffer</span> <span class="hljs-variable">s</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuffer</span>(<span class="hljs-string">&quot;abc&quot;</span>); <span class="hljs-comment">//生成字符串abc</span><br>    s.append(<span class="hljs-string">&quot;e&quot;</span>); <span class="hljs-comment">//abce</span><br>    s.insert(<span class="hljs-number">3</span>, <span class="hljs-string">&quot;d&quot;</span>);<span class="hljs-comment">//abcde</span><br>    System.out.println(s);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="StringBuilder"><a href="#StringBuilder" class="headerlink" title="StringBuilder"></a>StringBuilder</h2><p><code>StringBuilder</code>字符串变量（非线程安全），JDK5.0新增，此类提供一个与<code>StringBuffer</code>兼容的API，但不保证同步。</p>
+<p>在单线程的情况下使用较普遍。</p>
+<p>在大部分情况下<code>StringBuilder &gt; StringBuffer</code>。这主要是因为前者不需要考虑线程安全。</p>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>三者区别：</p>
+<ul>
+<li><code>String</code>不可变字符串，线程安全</li>
+<li><code>StringBuffer</code>可变的字符串，线程安全，方法上加<code>synchronized</code>关键字，效率较低</li>
+<li><code>StringBuilder</code>可变的字符串，非线程安全，效率较高</li>
+</ul>
+<p>相同点：</p>
+<ul>
+<li>都实现了<code>CharSequence</code>接口</li>
+<li>底层使用<code>char[]</code>存储字符串</li>
+</ul>
+<p>构造方法：</p>
+<ul>
+<li><code>String</code>:</li>
+<li><code>String str = new String(String str);</code>根据输入内容创建不可变的字符串对象</li>
+<li><code>String str = &quot;str&quot;;</code>直接根据字符串的值创建不可变的字符串对象</li>
+<li><code>StringBuffer</code>:<ul>
+<li><code>StringBuffer str = new StringBuffer(String str)</code>根据字符串的内容，来创建可变字符串对象</li>
+<li><code>StringBuffer str = new StringBuffer()</code>创建一个空白的可变字符串对象</li>
+</ul>
+</li>
+<li><code>StringBuilder</code><ul>
+<li><code>StringBuffer str = new StringBuffer(String str)</code>根据字符串的内容，来创建可变字符串对象</li>
+<li><code>StringBuffer str = new StringBuffer()</code>创建一个空白的可变字符串对象</li>
+</ul>
+</li>
+</ul>
+<p><strong>应该怎么选择</strong>：在执行效率方面，<code>StringBuilder</code>最高，<code>Stringbuffer</code>其次，<code>String</code>最低。</p>
+<ul>
+<li>当可以确定字符是不需要改变的或者修改的次数很少那么选择<code>String</code></li>
+<li>如果需要频繁的对字符串进行修改，那么从<code>StringBuffer</code>或者<code>StringBuilder</code>中选择</li>
+<li>优先选择<code>StringBuilder</code>，因为其效率最高，但是当需要保证线程安全时，就要选择<code>StringBuffer</code></li>
+<li>当大致知道整个字符串长度的时候，那么就可以使用<code>StringBuilder</code>带参数的构造参数，就会在构造对象的时候创建指定长度的数组，避免不断扩容导致的底层数组不断复制</li>
+</ul>
 
                 
               </div>
@@ -305,7 +344,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/life/" class="category-chain-item">life</a>
+  <a href="/categories/Java/" class="category-chain-item">Java</a>
   
   
 
@@ -320,7 +359,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
+        <a href="/tags/Java%E5%9F%BA%E7%A1%80/">#Java基础</a>
       
     </div>
   
@@ -332,8 +371,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>第一篇博客</div>
-      <div>http://example.com/2022/09/10/第一篇博客/</div>
+      <div>Java中的字符串</div>
+      <div>http://example.com/2022/09/12/Java中的字符串/</div>
     </div>
     <div class="license-meta">
       
@@ -345,7 +384,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月10日</div>
+          <div>2022年9月12日</div>
         </div>
       
       
@@ -375,18 +414,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/11/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="Java基本数据类型">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Java基本数据类型</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/08/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2022/09/11/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="Java基本数据类型">
+                        <span class="hidden-mobile">Java基本数据类型</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
