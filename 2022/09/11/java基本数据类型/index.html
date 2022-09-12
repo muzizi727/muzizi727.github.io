@@ -16,22 +16,22 @@
   <meta name="author" content="Lyice">
   <meta name="keywords" content="">
   
-    <meta name="description" content="第一篇博客欢迎来到Lyice’s的博客 写在最前面本人从2017年底开始实习到现在已经工作好几年了，但是发现自己主要是在写一些偏业务上的代码。期间也跟着视频或者文章学过一些新的技术栈，但是一般都是跟着视频实践，没有真正应用到项目中。加上看过之后长时间用不到，感觉学了没多久就忘记了。所以一直想写一个博客记录下来，但是基于各种原因一直拖延到现在。加上之前想着多写几篇一起发，但是电脑坏了重装系统后写的文">
+    <meta name="description" content="Java基本数据类型Java中的八种基本类型   类型 字节 默认值    byte 1 0   short 2 0   int 4 0   long 8 0L   float 4 0.0f   double 8 0.0d   char 2 false   boolean 1或者4 \u0000     注：《Java虚拟机规范》指出boolean当作int处理4个字节，和 boolean 数组当">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇博客">
-<meta property="og:url" content="http://example.com/2022/09/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="Java基本数据类型">
+<meta property="og:url" content="http://example.com/2022/09/11/java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Lyice&#39;s Blog">
-<meta property="og:description" content="第一篇博客欢迎来到Lyice’s的博客 写在最前面本人从2017年底开始实习到现在已经工作好几年了，但是发现自己主要是在写一些偏业务上的代码。期间也跟着视频或者文章学过一些新的技术栈，但是一般都是跟着视频实践，没有真正应用到项目中。加上看过之后长时间用不到，感觉学了没多久就忘记了。所以一直想写一个博客记录下来，但是基于各种原因一直拖延到现在。加上之前想着多写几篇一起发，但是电脑坏了重装系统后写的文">
+<meta property="og:description" content="Java基本数据类型Java中的八种基本类型   类型 字节 默认值    byte 1 0   short 2 0   int 4 0   long 8 0L   float 4 0.0f   double 8 0.0d   char 2 false   boolean 1或者4 \u0000     注：《Java虚拟机规范》指出boolean当作int处理4个字节，和 boolean 数组当">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-10T08:16:33.000Z">
-<meta property="article:modified_time" content="2022-09-10T08:56:34.385Z">
+<meta property="article:published_time" content="2022-09-11T08:07:15.000Z">
+<meta property="article:modified_time" content="2022-09-11T08:07:17.682Z">
 <meta property="article:author" content="Lyice">
-<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="Java基础">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>第一篇博客 - Lyice&#39;s Blog</title>
+  <title>Java基本数据类型 - Lyice&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="第一篇博客"></span>
+            <span id="subtitle" data-typed-text="Java基本数据类型"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-10 16:16" pubdate>
-          2022年9月10日 下午
+        <time datetime="2022-09-11 16:07" pubdate>
+          2022年9月11日 下午
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          536 字
+          2.3k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          5 分钟
+          20 分钟
         
       </span>
     
@@ -268,25 +268,201 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">第一篇博客</h1>
+            <h1 style="display: none">Java基本数据类型</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><p>欢迎来到Lyice’s的博客</p>
-<h2 id="写在最前面"><a href="#写在最前面" class="headerlink" title="写在最前面"></a>写在最前面</h2><p>本人从2017年底开始实习到现在已经工作好几年了，但是发现自己主要是在写一些偏业务上的代码。期间也跟着视频或者文章学过一些新的技术栈，但是一般都是跟着视频实践，没有真正应用到项目中。加上看过之后长时间用不到，感觉学了没多久就忘记了。所以一直想写一个博客记录下来，但是基于各种原因一直拖延到现在。加上之前想着多写几篇一起发，但是电脑坏了重装系统后写的文章都没了，所以改变了一下思路，想着每写一个文章就发一篇。</p>
-<p>同时写博客也是达到一个自我驱动的目的，本人平时就是间接性踌躇满志，持续性混吃等死的状态。所以也希望通过写博客能让自己坚持持续的学习。</p>
-<p>最后我并未将此地址告知任何人，也暂时不打算这么做。</p>
-<h2 id="当下情况"><a href="#当下情况" class="headerlink" title="当下情况"></a>当下情况</h2><p>目前的技术足够应付日常的开发情况，但是想要更进一步写出简单易懂、效率高、拓展性好的代码还是比较吃力。加上国内的就业形势，为了以后不被优化，计划利用每周空闲时间来给自己充电学习。持续的提高自己的不可替代性。</p>
-<h2 id="近期计划"><a href="#近期计划" class="headerlink" title="近期计划"></a>近期计划</h2><ul>
-<li>从java基础开始梳理一下，然后通过博客记录下来</li>
-<li>梳理完java基础之后重点看下java并发</li>
-<li>在不加班的情况下保持周更博客</li>
+                <h1 id="Java基本数据类型"><a href="#Java基本数据类型" class="headerlink" title="Java基本数据类型"></a>Java基本数据类型</h1><h2 id="Java中的八种基本类型"><a href="#Java中的八种基本类型" class="headerlink" title="Java中的八种基本类型"></a>Java中的八种基本类型</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>字节</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>int</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8</td>
+<td>0L</td>
+</tr>
+<tr>
+<td>float</td>
+<td>4</td>
+<td>0.0f</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8</td>
+<td>0.0d</td>
+</tr>
+<tr>
+<td>char</td>
+<td>2</td>
+<td>false</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>1或者4</td>
+<td>\u0000</td>
+</tr>
+</tbody></table>
+<p>  <strong>注：</strong>《Java虚拟机规范》指出boolean当作int处理4个字节，和 boolean 数组当作byte数组处理 1 个字节，具体还要看虚拟机实现是否按照规范来，所以 1 个字节、4 个字节都是有可能的。</p>
+<h2 id="数据的类型转换"><a href="#数据的类型转换" class="headerlink" title="数据的类型转换"></a>数据的类型转换</h2><h3 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h3><h4 id="上下转型"><a href="#上下转型" class="headerlink" title="上下转型"></a>上下转型</h4><p>Java中不能隐式执行向下转型，因为这会使数据表示精度降低，但是可以向上转型，并且遵循以下规则：</p>
+<ul>
+<li>整型、常量、浮点型、字符型数据可以混合运算。</li>
+<li>运算中，不同类型的数据先转换为同一类型，然后进行运算。</li>
+<li>转换等级数据精度由低到高。</li>
+<li>转换等级由低到高：byte，short，char-&gt;int-&gt;long-&gt;float-&gt;double</li>
 </ul>
-<h2 id="未来方向"><a href="#未来方向" class="headerlink" title="未来方向"></a>未来方向</h2><p>争取通过自己的努力进一个自研、不加班的公司。</p>
-<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><blockquote>
-<p> <strong>种一棵树最好的时间是十年前，其次是现在</strong></p>
+<h4 id="表达式数据类型自动提升"><a href="#表达式数据类型自动提升" class="headerlink" title="表达式数据类型自动提升"></a>表达式数据类型自动提升</h4><p>表达式的数据类型自动提升，关于类型的自动提升，注意下面的规则：</p>
+<ul>
+<li>所有的byte、short、char类型的值被提升为int</li>
+<li>如果有一个操作数是long，计算结果是long。</li>
+<li>如果有一个操作数是float，计算结果是float。</li>
+<li>如果有一个操作数是double，计算结果是double。</li>
+</ul>
+<p><strong>注：</strong> 以上规则当存在多个数据类型根据将转换成等级最高的数据类型。</p>
+<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><p>将范围大的数据转换为小数据时，可以使用强制类型转换，这种转换可能会导致溢出或者精度下降。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span>&#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">123</span>;<br>    <span class="hljs-type">byte</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> (<span class="hljs-type">byte</span>)i;<span class="hljs-comment">//强制类型转换为byte</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="隐式强制类型转换"><a href="#隐式强制类型转换" class="headerlink" title="隐式强制类型转换"></a>隐式强制类型转换</h3><ul>
+<li>整数的默认类型是int。</li>
+<li>浮点型默认是double，在定义float类型必须在数字后面跟上F或者f。</li>
+</ul>
+<h2 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h2><p>引用数据类型：类，接口，数组都是引用数据类型。</p>
+<p>引用类型的特点：</p>
+<ul>
+<li>引用类型作为类首先继承Object，拥有了Object类的方法。</li>
+<li>引用类型的变量可以存储null值。</li>
+</ul>
+<p>Java中的基本数据类型都有对应的包装类。</p>
+<table>
+<thead>
+<tr>
+<th>基本数据类型</th>
+<th>包装类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>short</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>int</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>long</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>char</td>
+<td>Character</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Boolean</td>
+</tr>
+</tbody></table>
+<p>Java为包装类做了一些特殊功能：</p>
+<ul>
+<li><p>可以把基本数据类型的转换成字符串类型的值</p>
+<ol>
+<li>调用对应<strong>包装类实体</strong>.toString()方法，如<code>Integer i = 1;String s = i.toString();</code></li>
+<li>调用对应的<strong>包装类型</strong>.toString(基本数据类型的值)，如<code>String s = Integer.toString(1);</code></li>
+<li>直接把基本数据类型拼接字符串，如<code>int i = 0; String s = i+&quot;&quot;;</code></li>
+</ol>
+</li>
+<li><p>可以把字符串类型的数值转换成对应的基本数据类型的值</p>
+<ol>
+<li><strong>包装类型</strong>.parse<strong>对应类型</strong>(“字符串的值”)，如<code>Integer.parseInt(&quot;1&quot;);</code></li>
+<li><strong>包装类型</strong>.valueOf(“字符串的值”)，如<code>Integer.valueOf(&quot;1&quot;);</code></li>
+</ol>
+</li>
+</ul>
+<h3 id="类型对比"><a href="#类型对比" class="headerlink" title="类型对比"></a>类型对比</h3><ul>
+<li><p>有了基本数据类型，为为什么还要包装类型？</p>
+<blockquote>
+<p>引用类型封装了数据和处理该数据的方法</p>
+<p>Java中大部分类和方法都是针对引用数据类型，包括泛型和集合。</p>
+<p>基本类型有默认值，无法表示空null。</p>
 </blockquote>
+</li>
+<li><p>引用类型包括了基本类型的功能，为什么还用基本类型？</p>
+<blockquote>
+<p>引用类型的对象要多存储对象头，对基本类型来说空间浪费率太高。逻辑上讲，Java只要包装类就够了，但是为了运行速度，需要用到基本数据类型；优先考虑运行效率问题，所以二者同时存在是合乎情理的。</p>
+</blockquote>
+</li>
+<li><p>&#x3D;&#x3D;</p>
+<blockquote>
+<p>基本类型：比较的是具体的值</p>
+<p>引用类型：比较的是对象的地址</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="自动装箱与拆箱"><a href="#自动装箱与拆箱" class="headerlink" title="自动装箱与拆箱"></a>自动装箱与拆箱</h3><blockquote>
+<p>Java是一门面向对象的编程语言，所以除了8大基础类型之外一切皆为对象，但为了方便面向对象开发，基础类型也有对应的包装类。但包装类和基础类型在赋值或比较时要进行类型转换，使用起来不够丝滑，感觉他们之间有很大的鸿沟。所以jdk1.5之后就推出了自动装箱和自动拆箱机制，使卡覅更加方便，代码更加简洁。</p>
+<p>自动装箱就是在编译时自动将基础类型转换与之对应的包装类，而拆箱刚好与之相反，就是在编译时自动将包装类转换为与之对应的基础类型。</p>
+</blockquote>
+<p>自动装箱拆箱要点：</p>
+<ul>
+<li>自动装箱时编译器调用<code>valueOf</code>将基本类型转换成对象，同时自动拆箱时，编译器通过调用类似<code>intValue()</code> 、<code>doubleValue()</code>等这类的方法将对象转换成基本类型。</li>
+</ul>
+<h4 id="何时自动装箱和拆箱"><a href="#何时自动装箱和拆箱" class="headerlink" title="何时自动装箱和拆箱"></a>何时自动装箱和拆箱</h4><p>自动装箱和拆箱在Java中很常见，比如有一个方法，接受一个对象类型的参数，如果我们传入一个基本类型，那么Java会自动将这个基本类型的值转换成与之对应的包装类型。</p>
+<p>以下两种情况会发生自动装箱</p>
+<ul>
+<li>基本类型作为参数传递给相应的包装类型方法</li>
+<li>基本类型分配到对应的包装类型变量</li>
+</ul>
+<p>以下四种情况会发生自动拆箱：</p>
+<ul>
+<li>包装类型作为参数传递给基本类型的方法</li>
+<li>包装类型分配到基本类型的变量</li>
+<li>在进行+,-时也会发生自动拆箱，因为Integer或者其他包装类型对象无法使用运算符。</li>
+<li>在使用三目运算符的情况下，可能会发生自动拆箱。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">ArrayList&lt;Integer&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>list.add(<span class="hljs-number">1</span>);<span class="hljs-comment">//自动装箱</span><br>list.add(<span class="hljs-number">2</span>);<span class="hljs-comment">//自动装箱</span><br><span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> list.get(<span class="hljs-number">0</span>);<span class="hljs-comment">//自动拆箱</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="自动装箱和自动拆箱的优缺点"><a href="#自动装箱和自动拆箱的优缺点" class="headerlink" title="自动装箱和自动拆箱的优缺点"></a>自动装箱和自动拆箱的优缺点</h4><p><strong>优点:</strong></p>
+<ul>
+<li>自动拆箱和自动装箱的引入方便了我们编写程序，提高编程效率</li>
+</ul>
+<p><strong>缺点:</strong></p>
+<ul>
+<li>由于包装类型是对象，可能存在空指针异常</li>
+<li>自动拆箱会消耗性能，在性能敏感且操作数量大的情况下，性能会明显下降</li>
+</ul>
+<p><strong>所以建议要避免无意义的拆箱、装箱。</strong></p>
 
                 
               </div>
@@ -305,7 +481,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/life/" class="category-chain-item">life</a>
+  <a href="/categories/Java/" class="category-chain-item">Java</a>
   
   
 
@@ -320,7 +496,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
+        <a href="/tags/Java%E5%9F%BA%E7%A1%80/">#Java基础</a>
       
     </div>
   
@@ -332,8 +508,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>第一篇博客</div>
-      <div>http://example.com/2022/09/10/第一篇博客/</div>
+      <div>Java基本数据类型</div>
+      <div>http://example.com/2022/09/11/java基本数据类型/</div>
     </div>
     <div class="license-meta">
       
@@ -345,7 +521,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月10日</div>
+          <div>2022年9月11日</div>
         </div>
       
       
@@ -375,18 +551,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/11/java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="Java基本数据类型">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Java基本数据类型</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/08/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2022/09/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="第一篇博客">
+                        <span class="hidden-mobile">第一篇博客</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
