@@ -58,7 +58,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -179,7 +179,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/index.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -220,7 +220,80 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/10/07/Java%E9%9B%86%E5%90%88%E4%B9%8BMap/" target="_self">
+          <img src="/img/cover.jpg" srcset="/img/loading.gif" lazyload alt="Java集合之Map">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/10/07/Java%E9%9B%86%E5%90%88%E4%B9%8BMap/" target="_self">
+          Java集合之Map
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt " href="/2022/10/07/Java%E9%9B%86%E5%90%88%E4%B9%8BMap/" target="_self">
+        <div>
+          Java集合之Map简介Map集合是一种双列集合，每个元素包含key-value两个值。 Map系列集合：  TreeMap简介 TreeMap实现了SortedMap接口，是有序不可重复的键值对集合，基于红黑树实现，每个key-value都作为一个红黑树的节点，如果构造TreeMap没有指定比较器，则根据key的自然顺序进行排序，如果指定了比较器则根据比较器排序。  继承关系 12public
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-10-07 21:14" pubdate>
+              2022-10-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Java%E9%9B%86%E5%90%88/">#Java集合</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/09/28/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F%E6%B1%A0%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%B8%B8%E9%87%8F%E6%B1%A0/" target="_self">
+          <img src="/img/cover.jpg" srcset="/img/loading.gif" lazyload alt="字符串常量池和基本类型的常量池">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
         <a href="/2022/09/28/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F%E6%B1%A0%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%B8%B8%E9%87%8F%E6%B1%A0/" target="_self">
@@ -229,7 +302,7 @@
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/09/28/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F%E6%B1%A0%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%B8%B8%E9%87%8F%E6%B1%A0/" target="_self">
+      <a class="index-excerpt " href="/2022/09/28/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F%E6%B1%A0%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%B8%B8%E9%87%8F%E6%B1%A0/" target="_self">
         <div>
           字符串常量池和基本类型的常量池常量池是为了避免频繁的创建和销毁对象而影响系统性能，其实现了对象的共享。 String Pool简介字符串常量池（String Pool）保存着所有的字符串字面量（literal strings），这些值在编译时期就确定，常量池类似于Java系统级别提供的缓存，存放对象和引用。  String Pool的底层类似一个固定大小的HashTable，每个元素都是key-v
         </div>
@@ -281,7 +354,13 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/09/18/Java%E9%9B%86%E5%90%88%E4%B9%8BList/" target="_self">
+          <img src="/img/cover.jpg" srcset="/img/loading.gif" lazyload alt="Java集合之List">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
         <a href="/2022/09/18/Java%E9%9B%86%E5%90%88%E4%B9%8BList/" target="_self">
@@ -290,7 +369,7 @@
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/09/18/Java%E9%9B%86%E5%90%88%E4%B9%8BList/" target="_self">
+      <a class="index-excerpt " href="/2022/09/18/Java%E9%9B%86%E5%90%88%E4%B9%8BList/" target="_self">
         <div>
           Java集合之List简介List子接口是Collection中最为常用的一个子接口。 List系列集合有索引，所以多了很多按照索引操作元素的功能 List系列集合：  Vector ArrayList LinkedList  ArrayListArrayList是比较常用的一个集合类。继承自AbstractList，实现了List接口。底层基于数组实现，容量大小动态变化。允许null值，查询快，
         </div>
@@ -342,18 +421,24 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/09/17/Java%E5%AE%B9%E5%99%A8/" target="_self">
+          <img src="/img/cover.jpg" srcset="/img/loading.gif" lazyload alt="Java集合">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
         <a href="/2022/09/17/Java%E5%AE%B9%E5%99%A8/" target="_self">
-          Java容器
+          Java集合
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/09/17/Java%E5%AE%B9%E5%99%A8/" target="_self">
+      <a class="index-excerpt " href="/2022/09/17/Java%E5%AE%B9%E5%99%A8/" target="_self">
         <div>
-          Java容器 容器主要包括Collection和Map两种，Collection存储着对象的集合，而Map存储着键值对（两个对象）的映射表。  数据结构 数据结构是计算机存储、组织数据的方式。数据结构是指相互之间存在一种或者多种特定关系的数据元素的集合。通常情况下，精心选择的数据结构可以带来更高的运行或者存储效率。数据结构往往同高效的检索算法和索引技术相关。  数据存储常用的结构有：数组、栈、队列
+          Java集合 容器主要包括Collection和Map两种，Collection存储着对象的集合，而Map存储着键值对（两个对象）的映射表。  数据结构 数据结构是计算机存储、组织数据的方式。数据结构是指相互之间存在一种或者多种特定关系的数据元素的集合。通常情况下，精心选择的数据结构可以带来更高的运行或者存储效率。数据结构往往同高效的检索算法和索引技术相关。  数据存储常用的结构有：数组、栈、队列
         </div>
       </a>
 
@@ -392,7 +477,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Java%E5%AE%B9%E5%99%A8/">#Java容器</a>
+              <a href="/tags/Java%E9%9B%86%E5%90%88/">#Java集合</a>
             
           </div>
         
@@ -403,7 +488,13 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/09/12/Java%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_self">
+          <img src="/img/cover.jpg" srcset="/img/loading.gif" lazyload alt="Java中的字符串">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
         <a href="/2022/09/12/Java%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_self">
@@ -412,7 +503,7 @@
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/09/12/Java%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_self">
+      <a class="index-excerpt " href="/2022/09/12/Java%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_self">
         <div>
           Java中的字符串Java提供了String、StringBuffer和StringBuilder类来封装字符串，并提供了一系列操作字符串对象的方法。它们的相同点都是用来封装字符串；并且都实现了CharSequence接口。 StringString类的value数组被声明为final，这意味着value数组初始化之后不能再引用其他数组，并且String内部没有改变value数组的方法，因此可以保
         </div>
@@ -464,7 +555,13 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/09/11/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_self">
+          <img src="/img/cover.jpg" srcset="/img/loading.gif" lazyload alt="Java基本数据类型">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
         <a href="/2022/09/11/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_self">
@@ -473,7 +570,7 @@
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/09/11/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_self">
+      <a class="index-excerpt " href="/2022/09/11/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" target="_self">
         <div>
           Java基本数据类型Java中的八种基本类型   类型 字节 默认值    byte 1 0   short 2 0   int 4 0   long 8 0L   float 4 0.0f   double 8 0.0d   char 2 false   boolean 1或者4 \u0000     注：《Java虚拟机规范》指出boolean当作int处理4个字节，和 boolean 数组当
         </div>
@@ -525,7 +622,13 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2022/09/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" target="_self">
+          <img src="/img/cover.jpg" srcset="/img/loading.gif" lazyload alt="第一篇博客">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
         <a href="/2022/09/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" target="_self">
@@ -534,7 +637,7 @@
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/09/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" target="_self">
+      <a class="index-excerpt " href="/2022/09/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" target="_self">
         <div>
           第一篇博客欢迎来到Lyice’s的博客 写在最前面本人从2017年底开始实习到现在已经工作好几年了，但是发现自己主要是在写一些偏业务上的代码。期间也跟着视频或者文章学过一些新的技术栈，但是一般都是跟着视频实践，没有真正应用到项目中。加上看过之后长时间用不到，感觉学了没多久就忘记了。所以一直想写一个博客记录下来，但是基于各种原因一直拖延到现在。加上之前想着多写几篇一起发，但是电脑坏了重装系统后写的文
         </div>
@@ -578,39 +681,6 @@
               <a href="/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
             
           </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2022/09/08/hello-world/" target="_self">
-          Hello World
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2022/09/08/hello-world/" target="_self">
-        <div>
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-09-08 13:20" pubdate>
-              2022-09-08
-            </time>
-          </div>
-        
-        
         
       </div>
     </article>
@@ -664,7 +734,8 @@
     <div class="footer-inner">
   
     <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+<div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   
