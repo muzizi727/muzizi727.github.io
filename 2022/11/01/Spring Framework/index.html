@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/cover.jpg">
 <meta property="article:published_time" content="2022-11-01T12:16:33.000Z">
-<meta property="article:modified_time" content="2023-03-24T12:58:40.572Z">
+<meta property="article:modified_time" content="2023-03-24T13:27:15.754Z">
 <meta property="article:author" content="Lyice">
 <meta property="article:tag" content="Java框架">
 <meta name="twitter:card" content="summary_large_image">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18k 字
+          17k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          149 分钟
+          144 分钟
         
       </span>
     
@@ -288,7 +288,7 @@
 <li>Spring的高度开放性，并不强制应用完成依赖于Spring，开发者可以自由选择用Spring框架的部分或者全部。</li>
 </ul>
 <p>Spring框架的组成结构图如下所示：</p>
-<p>![spring-overview](img&#x2F;Spring Framework.assets&#x2F;673670c9a34075831373b711cb8f21b7.png)</p>
+<p><img src="/img/SpringFramework.assets/673670c9a34075831373b711cb8f21b7.png" srcset="/img/loading.gif" lazyload alt="spring-overview"></p>
 <p>参考：<a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/basic-knowledge-summary-of-spring.html">Spring基础知识汇总 Java开发必看 | 菜鸟教程 (runoob.com)</a></p>
 <h2 id="IoC"><a href="#IoC" class="headerlink" title="IoC"></a>IoC</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>IoC全称为Inversion of Control，也叫“控制反转”，它不是一门技术，而是一种设计思想。</p>
 <p>Spring通过IoC容器来管理所有<code>Java</code>对象的实例化和初始化，控制对象与对象之间的依赖关系。我们将由IoC容器管理的<code>Java</code>对象称为Spring Bean，它与使用关键字<code>new</code>创建的<code>Java</code>对象没有任何区别。</p>
@@ -433,7 +433,7 @@
 <h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><p>对于普通的<code>Java</code>对象，当<code>new</code>的时候创建对象，然后该对象就可以使用了。一旦该对象不再被使用，则由<code>Java</code>垃圾回收器进行回收。</p>
 <p>而Spring中的对象是bean，bean和普通的<code>Java</code>对象没有什么大的区别，只不过Spring不需要再自己去<code>new</code>对象了，而是由IoC容器去帮助我们实例化对象并且管理它，我们需要哪个对象，去找IoC容器即可。IoC其实就是解决对象之间的耦合问题，bean的生命周期完全由容器控制。</p>
 <p>详细的流程如下：</p>
-<p>![bean生命周期](img&#x2F;Spring Framework.assets&#x2F;image-20221116210721982.png)</p>
+<p><img src="/img/SpringFramework.assets/image-20221116210721982.png" srcset="/img/loading.gif" lazyload alt="bean生命周期"></p>
 <p>单实例bean的全生命周期具体包含一下部分：</p>
 <ol>
 <li>BeanDefinition部分<ul>
@@ -455,19 +455,19 @@
 <p>上面为bean的主要生命周期，Spring为了方便扩展预留了许多钩子函数。当我们需要对bean进行修改时，只需要实现对应的接口，覆盖相对应的方法即可，当调用<code>initializeBean</code>时会对这些接口进行判断：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//源码位于 AbstractAutowireCapableBeanFactory.java</span><br><span class="hljs-keyword">protected</span> Object <span class="hljs-title function_">initializeBean</span><span class="hljs-params">(String beanName, Object bean, <span class="hljs-meta">@Nullable</span> RootBeanDefinition mbd)</span> &#123;<br>    <span class="hljs-comment">//回调Aware接口的方法（BeanNameAware,BeanClassLoaderAware,BeanFactoryAware）</span><br>    <span class="hljs-keyword">if</span> (System.getSecurityManager() != <span class="hljs-literal">null</span>) &#123;<br>        AccessController.doPrivileged(() -&gt; &#123;<br>            <span class="hljs-built_in">this</span>.invokeAwareMethods(beanName, bean);<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>        &#125;, <span class="hljs-built_in">this</span>.getAccessControlContext());<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-built_in">this</span>.invokeAwareMethods(beanName, bean);<br>    &#125;<br>    <br>    <span class="hljs-comment">//BeanPostProceesor前置处理</span><br>    <span class="hljs-type">Object</span> <span class="hljs-variable">wrappedBean</span> <span class="hljs-operator">=</span> bean;<br>    <span class="hljs-keyword">if</span> (mbd == <span class="hljs-literal">null</span> || !mbd.isSynthetic()) &#123;<br>        wrappedBean = <span class="hljs-built_in">this</span>.applyBeanPostProcessorsBeforeInitialization(bean, beanName);<br>    &#125;<br><br>    <span class="hljs-keyword">try</span> &#123;<br>        <span class="hljs-comment">//bean的初始化方法（init-method、afterPropertiesSet）</span><br>        <span class="hljs-built_in">this</span>.invokeInitMethods(beanName, wrappedBean, mbd);<br>    &#125; <span class="hljs-keyword">catch</span> (Throwable var6) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">BeanCreationException</span>(mbd != <span class="hljs-literal">null</span> ? mbd.getResourceDescription() : <span class="hljs-literal">null</span>, beanName, <span class="hljs-string">&quot;Invocation of init method failed&quot;</span>, var6);<br>    &#125;<br>	<span class="hljs-comment">//BeanPostProceesor后置处理</span><br>    <span class="hljs-keyword">if</span> (mbd == <span class="hljs-literal">null</span> || !mbd.isSynthetic()) &#123;<br>        wrappedBean = <span class="hljs-built_in">this</span>.applyBeanPostProcessorsAfterInitialization(wrappedBean, beanName);<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> wrappedBean;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>![bean的部分](img&#x2F;Spring Framework.assets&#x2F;20210710134349143.png)</p>
+<p><img src="/img/SpringFramework.assets/20210710134349143.png" srcset="/img/loading.gif" lazyload alt="bean的部分"></p>
 <p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/riemann_/article/details/118500805">一文读懂 Spring Bean 的生命周期_老周聊架构的博客-CSDN博客_springbean生命周期详解</a></p>
 <h3 id="Spring循环依赖"><a href="#Spring循环依赖" class="headerlink" title="Spring循环依赖"></a>Spring循环依赖</h3><h4 id="什么是循环依赖？"><a href="#什么是循环依赖？" class="headerlink" title="什么是循环依赖？"></a>什么是循环依赖？</h4><p>循环依赖其实就是循环引用，也就是两个或两个以上的bean互相引用对方，最终形成闭环。</p>
-<p>![循环依赖](img&#x2F;Spring Framework.assets&#x2F;image-20221124205701883.png)</p>
+<p><img src="/img/SpringFramework.assets/image-20221124205701883.png" srcset="/img/loading.gif" lazyload alt="循环依赖"></p>
 <p>代码中的表现：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Componet</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span>&#123;<br>    <span class="hljs-meta">@Resource</span><br>    <span class="hljs-keyword">private</span> B b;<br>&#125;<br><span class="hljs-meta">@Component</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span>&#123;<br>    <span class="hljs-meta">@Resource</span><br>    <span class="hljs-keyword">private</span> A a;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>Spring的循环依赖过程，跟bean的声明周期密切相关，在实例化bean的时候，会完成依赖注入。所以就会出现<code>实例化A</code>-&gt;<code>属性填充注入B</code>-&gt;<code>B没有实例化，需要先实例化B</code>-&gt;<code>实例化B</code>-&gt;<code>属性填充注入A</code>-&gt;<code>A实例化未完成，无法注入</code>-&gt;<code>实例化B失败</code>-&gt;<code>实例化A失败</code>。 </p>
 <h4 id="Spring解决循环依赖的方式"><a href="#Spring解决循环依赖的方式" class="headerlink" title="Spring解决循环依赖的方式"></a>Spring解决循环依赖的方式</h4><p>Spring是通过三级缓存来解决循环依赖的，提前暴露的对象存放在三级缓存中，二级缓存存放过度bean，一级缓存存放最终形成的bean。</p>
-<p>![三级缓存](img&#x2F;Spring Framework.assets&#x2F;下载.png)</p>
+<p><img src="/img/SpringFramework.assets/%E4%B8%8B%E8%BD%BD.png" srcset="/img/loading.gif" lazyload alt="三级缓存"></p>
 <p><code>ObjectFactory</code>是一个函数式接口：</p>
 <p>在<code>java</code>中，方法在调用的时候都是具体的值，当使用函数式接口作为方法的参数类型时，可以将一个lambda表达式作为参数传递到方法中，lambda表达式在方法执行的时候并不会立刻调用，只有在调用<code>getObject</code>方法的时候才会完成此表达式的调用。</p>
-<p>![三级缓存过程](img&#x2F;Spring Framework.assets&#x2F;image-20221124210201570.png)</p>
+<p><img src="/img/SpringFramework.assets/image-20221124210201570.png" srcset="/img/loading.gif" lazyload alt="三级缓存过程"></p>
 <p>为什么必须要使用三级缓存来解决循环依赖问题？三级缓存是如何解决循环依赖问题的？</p>
 <ol>
 <li><p>创建代理对象的时候是否需要创建原始对象？<br>需要，因为bean的生命周期是固定的，每次在对象创建的时候必须要先创建出原始对象</p>
@@ -585,7 +585,7 @@
 <li><code>TransactionStatus</code>：事务运行状态</li>
 </ul>
 <p>下图是Spring事务抽象的核心类图：</p>
-<p>![Spring事务类图](img&#x2F;Spring Framework.assets&#x2F;v2-ff9900cb40f07db75d1190628f464564_720w.webp)</p>
+<p><img src="/img/SpringFramework.assets/v2-ff9900cb40f07db75d1190628f464564_720w.webp" srcset="/img/loading.gif" lazyload alt="Spring事务类图"></p>
 <p><code>PlatfromTransactionManager</code>接口定义了三个方法用来操作事务：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">PlatformTransactionManager</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">TransactionManager</span> &#123;<br>    <span class="hljs-comment">//获得事务</span><br>    TransactionStatus <span class="hljs-title function_">getTransaction</span><span class="hljs-params">(<span class="hljs-meta">@Nullable</span> TransactionDefinition var1)</span> <span class="hljs-keyword">throws</span> TransactionException;<br>	<span class="hljs-comment">//提交事务</span><br>    <span class="hljs-keyword">void</span> <span class="hljs-title function_">commit</span><span class="hljs-params">(TransactionStatus var1)</span> <span class="hljs-keyword">throws</span> TransactionException;<br>	<span class="hljs-comment">//回滚事务</span><br>    <span class="hljs-keyword">void</span> <span class="hljs-title function_">rollback</span><span class="hljs-params">(TransactionStatus var1)</span> <span class="hljs-keyword">throws</span> TransactionException;<br>&#125;<br></code></pre></td></tr></table></figure>
 
@@ -625,7 +625,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">OracleDataBase</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">DataBaseSPI</span> &#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">connection</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;oracle database 已经链接。。。&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>在resource下的META-INF目录新增spring.factories文件</p>
-<p>![image-20230308124750629](img&#x2F;Spring Framework.assets&#x2F;image-20230308124750629.png)</p>
+<p><img src="/img/SpringFramework.assets/image-20230308124750629.png" srcset="/img/loading.gif" lazyload alt="image-20230308124750629"></p>
 <p>spring.factories文件内容：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs factories">org.example.DataBaseSPI = org.example.MysqlDataBase,org.example.OracleDataBase<br></code></pre></td></tr></table></figure>
 
