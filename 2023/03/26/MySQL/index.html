@@ -16,24 +16,24 @@
   <meta name="author" content="Lyice">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Java中的字符串Java提供了String、StringBuffer和StringBuilder类来封装字符串，并提供了一系列操作字符串对象的方法。它们的相同点都是用来封装字符串；并且都实现了CharSequence接口。 StringString类的value数组被声明为final，这意味着value数组初始化之后不能再引用其他数组，并且String内部没有改变value数组的方法，因此可以保">
+    <meta name="description" content="MySQLMySQL是一个关系型数据库，由瑞典MySQL AB公司开发，目前属于Oracle公司。 MySQL基础SQL的分类SQL程序语言有四种类型，对数据库的基本操作都属于这四类：  DDL（Data Definition Language）：数据库定义语言，用来定义数据库、表、字段 DML（Data Manipulation Language）：数据操纵语言，用来修改数据库中数据 DQL（D">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java中的字符串">
-<meta property="og:url" content="http://example.com/2022/09/12/Java%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/index.html">
+<meta property="og:title" content="MySQL">
+<meta property="og:url" content="http://example.com/2023/03/26/MySQL/index.html">
 <meta property="og:site_name" content="Lyice&#39;s Blog">
-<meta property="og:description" content="Java中的字符串Java提供了String、StringBuffer和StringBuilder类来封装字符串，并提供了一系列操作字符串对象的方法。它们的相同点都是用来封装字符串；并且都实现了CharSequence接口。 StringString类的value数组被声明为final，这意味着value数组初始化之后不能再引用其他数组，并且String内部没有改变value数组的方法，因此可以保">
+<meta property="og:description" content="MySQLMySQL是一个关系型数据库，由瑞典MySQL AB公司开发，目前属于Oracle公司。 MySQL基础SQL的分类SQL程序语言有四种类型，对数据库的基本操作都属于这四类：  DDL（Data Definition Language）：数据库定义语言，用来定义数据库、表、字段 DML（Data Manipulation Language）：数据操纵语言，用来修改数据库中数据 DQL（D">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/cover.jpg">
-<meta property="article:published_time" content="2022-09-12T14:10:49.000Z">
-<meta property="article:modified_time" content="2022-11-12T09:56:57.918Z">
+<meta property="article:published_time" content="2023-03-26T07:16:36.000Z">
+<meta property="article:modified_time" content="2023-03-29T13:00:39.296Z">
 <meta property="article:author" content="Lyice">
-<meta property="article:tag" content="Java基础">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/cover.jpg">
   
   
   
-  <title>Java中的字符串 - Lyice&#39;s Blog</title>
+  <title>MySQL - Lyice&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Java中的字符串"></span>
+            <span id="subtitle" data-typed-text="MySQL"></span>
           
         </div>
 
@@ -209,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-12 22:10" pubdate>
-          2022年9月12日 晚上
+        <time datetime="2023-03-26 15:16" pubdate>
+          2023年3月26日 下午
         </time>
       </span>
     
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          2.9k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          16 分钟
+          25 分钟
         
       </span>
     
@@ -270,64 +270,49 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Java中的字符串</h1>
+            <h1 style="display: none">MySQL</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="Java中的字符串"><a href="#Java中的字符串" class="headerlink" title="Java中的字符串"></a>Java中的字符串</h1><p>Java提供了<code>String</code>、<code>StringBuffer</code>和<code>StringBuilder</code>类来封装字符串，并提供了一系列操作字符串对象的方法。它们的相同点都是用来封装字符串；并且都实现了<code>CharSequence</code>接口。</p>
-<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p><code>String</code>类的<code>value</code>数组被声明为<code>final</code>，这意味着<code>value</code>数组初始化之后不能再引用其他数组，并且<code>String</code>内部没有改变<code>value</code>数组的方法，因此可以保证<code>String</code>不可变，同时保证线程安全。<code>String</code>类被声明为<code>final</code>，因此不可被继承。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">String</span><br>    <span class="hljs-keyword">implements</span> <span class="hljs-title class_">java</span>.io.Serializable, Comparable&lt;String&gt;, CharSequence &#123;<br>    <span class="hljs-comment">/** The value is used for character storage. */</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-type">char</span> value[];<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><p>MySQL是一个关系型数据库，由瑞典MySQL AB公司开发，目前属于Oracle公司。</p>
+<h1 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h1><h2 id="SQL的分类"><a href="#SQL的分类" class="headerlink" title="SQL的分类"></a>SQL的分类</h2><p>SQL程序语言有四种类型，对数据库的基本操作都属于这四类：</p>
+<ol>
+<li>DDL（Data Definition Language）：数据库定义语言，用来定义数据库、表、字段</li>
+<li>DML（Data Manipulation Language）：数据操纵语言，用来修改数据库中数据</li>
+<li>DQL（Data Query Language）：数据库查询语言，用来查询数据库中的数据</li>
+<li>DCL（Data Control Language）：数据控制语言，用来控制数据库对象的权限管理、事务等</li>
+</ol>
+<h2 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h2><h3 id="1-操作数据库"><a href="#1-操作数据库" class="headerlink" title="1.操作数据库"></a>1.操作数据库</h3><p>查询所有数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">show</span> databases;<br></code></pre></td></tr></table></figure>
 
-<p><strong>注：</strong>不可变的意思是每次更改都会产生新的字符串。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">s</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;a&quot;</span>; <br>s += <span class="hljs-string">&quot;b&quot;</span>;<br></code></pre></td></tr></table></figure>
+<p>创建数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">create</span> database test;<br></code></pre></td></tr></table></figure>
 
-<p>以上代码会线程一个字符串”a”对象，并且s指向该对象。然后再生成一个字符串”ab”对象，把s的指向地址改为”ab”对象。</p>
-<h2 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer"></a>StringBuffer</h2><p><code>StringBuffer</code>为字符串变量（线程安全），如果要频繁的对字符串内容进行修改，处于效率考虑最好使用可<code>StringBuffer</code>，如果想转成<code>String</code>类型，可以调用<code>StringBuffer.toString()</code>方法。</p>
-<p><code>StringBuffer</code>上的主要操作是<code>append</code>和<code>insert</code>方法，可重载这些方法以接受任意类型的数据。每个方法都能有效的将给定的数据转换成字符串，然后将该字符串的字符添加或者插入到字符串缓冲区中。</p>
-<ul>
-<li><code>append</code>方法始终将这些字符添加到缓冲区的末端</li>
-<li><code>insert</code>方法则在指定的位置添加字符</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">StringBuffer</span> <span class="hljs-variable">s</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuffer</span>(<span class="hljs-string">&quot;abc&quot;</span>); <span class="hljs-comment">//生成字符串abc</span><br>    s.append(<span class="hljs-string">&quot;e&quot;</span>); <span class="hljs-comment">//abce</span><br>    s.insert(<span class="hljs-number">3</span>, <span class="hljs-string">&quot;d&quot;</span>);<span class="hljs-comment">//abcde</span><br>    System.out.println(s);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>使用指定数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">use test;<br></code></pre></td></tr></table></figure>
 
-<h2 id="StringBuilder"><a href="#StringBuilder" class="headerlink" title="StringBuilder"></a>StringBuilder</h2><p><code>StringBuilder</code>字符串变量（非线程安全），JDK5.0新增，此类提供一个与<code>StringBuffer</code>兼容的API，但不保证同步。</p>
-<p>在单线程的情况下使用较普遍。</p>
-<p>在大部分情况下<code>StringBuilder &gt; StringBuffer</code>。这主要是因为前者不需要考虑线程安全。</p>
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>三者区别：</p>
-<ul>
-<li><code>String</code>不可变字符串，线程安全</li>
-<li><code>StringBuffer</code>可变的字符串，线程安全，方法上加<code>synchronized</code>关键字，效率较低</li>
-<li><code>StringBuilder</code>可变的字符串，非线程安全，效率较高</li>
-</ul>
-<p>相同点：</p>
-<ul>
-<li>都实现了<code>CharSequence</code>接口</li>
-<li>底层使用<code>char[]</code>存储字符串</li>
-</ul>
-<p>构造方法：</p>
-<ul>
-<li><code>String</code>:</li>
-<li><code>String str = new String(String str);</code>根据输入内容创建不可变的字符串对象</li>
-<li><code>String str = &quot;str&quot;;</code>直接根据字符串的值创建不可变的字符串对象</li>
-<li><code>StringBuffer</code>:<ul>
-<li><code>StringBuffer str = new StringBuffer(String str)</code>根据字符串的内容，来创建可变字符串对象</li>
-<li><code>StringBuffer str = new StringBuffer()</code>创建一个空白的可变字符串对象</li>
-</ul>
-</li>
-<li><code>StringBuilder</code><ul>
-<li><code>StringBuffer str = new StringBuffer(String str)</code>根据字符串的内容，来创建可变字符串对象</li>
-<li><code>StringBuffer str = new StringBuffer()</code>创建一个空白的可变字符串对象</li>
-</ul>
-</li>
-</ul>
-<p><strong>应该怎么选择</strong>：在执行效率方面，<code>StringBuilder</code>最高，<code>Stringbuffer</code>其次，<code>String</code>最低。</p>
-<ul>
-<li>当可以确定字符是不需要改变的或者修改的次数很少那么选择<code>String</code></li>
-<li>如果需要频繁的对字符串进行修改，那么从<code>StringBuffer</code>或者<code>StringBuilder</code>中选择</li>
-<li>优先选择<code>StringBuilder</code>，因为其效率最高，但是当需要保证线程安全时，就要选择<code>StringBuffer</code></li>
-<li>当大致知道整个字符串长度的时候，那么就可以使用<code>StringBuilder</code>带参数的构造参数，就会在构造对象的时候创建指定长度的数组，避免不断扩容导致的底层数组不断复制</li>
-</ul>
+<h3 id="2-操作表"><a href="#2-操作表" class="headerlink" title="2.操作表"></a>2.操作表</h3><p>创建表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp(<br>    id          <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;编号&#x27;</span>,<br>    workno      <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name        <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    gender      <span class="hljs-type">char</span>(<span class="hljs-number">1</span>) comment <span class="hljs-string">&#x27;性别&#x27;</span>,<br>    age         tinyint unsigned comment <span class="hljs-string">&#x27;年龄&#x27;</span>,<br>    idcard      <span class="hljs-type">char</span>(<span class="hljs-number">18</span>) comment <span class="hljs-string">&#x27;身份证号&#x27;</span>,<br>    workaddress <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>) comment <span class="hljs-string">&#x27;工作地址&#x27;</span>,<br>    entrydate   <span class="hljs-type">date</span> comment <span class="hljs-string">&#x27;入职时间&#x27;</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+<p>展示表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">describe</span> emp;<br></code></pre></td></tr></table></figure>
+
+<p>查看表中的数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> emp;<br></code></pre></td></tr></table></figure>
+
+<p>向表中插入数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp <span class="hljs-keyword">values</span>(<span class="hljs-string">&#x27;列名1&#x27;</span>,<span class="hljs-string">&#x27;列名2&#x27;</span>...);<br></code></pre></td></tr></table></figure>
+
+<p>删除表中数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">delete</span> <span class="hljs-keyword">from</span> emp <span class="hljs-keyword">where</span> 条件;<br></code></pre></td></tr></table></figure>
+
+<p>修改表中数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">update</span> emp <span class="hljs-keyword">set</span> 列 <span class="hljs-operator">=</span> ’新值‘ <span class="hljs-keyword">where</span> 条件;<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-查询练习"><a href="#3-查询练习" class="headerlink" title="3.查询练习"></a>3.查询练习</h3><p>先向表中添加测试数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp (id, workno, name, gender, age, idcard, workaddress, entrydate)<br><span class="hljs-keyword">values</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;柳岩&#x27;</span>, <span class="hljs-string">&#x27;女&#x27;</span>, <span class="hljs-number">20</span>, <span class="hljs-string">&#x27;123456789012345678&#x27;</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-string">&#x27;2000-01-01&#x27;</span>),<br>       (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;张无忌&#x27;</span>, <span class="hljs-string">&#x27;男&#x27;</span>, <span class="hljs-number">18</span>, <span class="hljs-string">&#x27;123456789012345670&#x27;</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-string">&#x27;2005-09-01&#x27;</span>),<br>       (<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;韦一笑&#x27;</span>, <span class="hljs-string">&#x27;男&#x27;</span>, <span class="hljs-number">38</span>, <span class="hljs-string">&#x27;123456789712345670&#x27;</span>, <span class="hljs-string">&#x27;上海&#x27;</span>, <span class="hljs-string">&#x27;2005-08-01&#x27;</span>),<br>       (<span class="hljs-number">4</span>, <span class="hljs-string">&#x27;4&#x27;</span>, <span class="hljs-string">&#x27;赵敏&#x27;</span>, <span class="hljs-string">&#x27;女&#x27;</span>, <span class="hljs-number">18</span>, <span class="hljs-string">&#x27;123456757123845670&#x27;</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-string">&#x27;2009-12-01&#x27;</span>),<br>       (<span class="hljs-number">5</span>, <span class="hljs-string">&#x27;5&#x27;</span>, <span class="hljs-string">&#x27;小曜&#x27;</span>, <span class="hljs-string">&#x27;女&#x27;</span>, <span class="hljs-number">16</span>, <span class="hljs-string">&#x27;123456769012345678&#x27;</span>, <span class="hljs-string">&#x27;上海&#x27;</span>, <span class="hljs-string">&#x27;2007-07-01&#x27;</span>),<br>       (<span class="hljs-number">6</span>, <span class="hljs-string">&#x27;6&#x27;</span>, <span class="hljs-string">&#x27;杨迫&#x27;</span>, <span class="hljs-string">&#x27;男&#x27;</span>, <span class="hljs-number">28</span>, <span class="hljs-string">&#x27;12345678931234567X&#x27;</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-string">&#x27;2006-01-01&#x27;</span>),<br>       (<span class="hljs-number">7</span>, <span class="hljs-string">&#x27;7&#x27;</span>, <span class="hljs-string">&#x27;范瑶&#x27;</span>, <span class="hljs-string">&#x27;男&#x27;</span>, <span class="hljs-number">40</span>, <span class="hljs-string">&#x27;123456789212345670&#x27;</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-string">&#x27;2005-05-01&#x27;</span>),<br>       (<span class="hljs-number">8</span>, <span class="hljs-string">&#x27;8&#x27;</span>, <span class="hljs-string">&#x27;黛绮丝&#x27;</span>, <span class="hljs-string">&#x27;女&#x27;</span>, <span class="hljs-number">38</span>, <span class="hljs-string">&#x27;123456157123645670&#x27;</span>, <span class="hljs-string">&#x27;天津&#x27;</span>, <span class="hljs-string">&#x27;2015-05-01&#x27;</span>),<br>       (<span class="hljs-number">9</span>, <span class="hljs-string">&#x27;9&#x27;</span>, <span class="hljs-string">&#x27;范凉凉&#x27;</span>, <span class="hljs-string">&#x27;女&#x27;</span>, <span class="hljs-number">45</span>, <span class="hljs-string">&#x27;123156789812345678&#x27;</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-string">&#x27;2010-04-01&#x27;</span>),<br>       (<span class="hljs-number">10</span>, <span class="hljs-string">&#x27;10&#x27;</span>, <span class="hljs-string">&#x27;陈友谅&#x27;</span>, <span class="hljs-string">&#x27;男&#x27;</span>, <span class="hljs-number">53</span>, <span class="hljs-string">&#x27;123456789012345670&#x27;</span>, <span class="hljs-string">&#x27;上海&#x27;</span>, <span class="hljs-string">&#x27;2011-01-01&#x27;</span>),<br>       (<span class="hljs-number">11</span>, <span class="hljs-string">&#x27;11&#x27;</span>, <span class="hljs-string">&#x27;张土诚&#x27;</span>, <span class="hljs-string">&#x27;男&#x27;</span>, <span class="hljs-number">55</span>, <span class="hljs-string">&#x27;123567897123465670&#x27;</span>, <span class="hljs-string">&#x27;江苏&#x27;</span>, <span class="hljs-string">&#x27;2015-05-01&#x27;</span>),<br>       (<span class="hljs-number">12</span>, <span class="hljs-string">&#x27;12&#x27;</span>, <span class="hljs-string">&#x27;常週春&#x27;</span>, <span class="hljs-string">&#x27;男&#x27;</span>, <span class="hljs-number">32</span>, <span class="hljs-string">&#x27;123446757152345670&#x27;</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-string">&#x27;2004-02-01&#x27;</span>),<br>       (<span class="hljs-number">13</span>, <span class="hljs-string">&#x27;13&#x27;</span>, <span class="hljs-string">&#x27;张三十&#x27;</span>, <span class="hljs-string">&#x27;男&#x27;</span>, <span class="hljs-number">88</span>, <span class="hljs-string">&#x27;123656789012345678&#x27;</span>, <span class="hljs-string">&#x27;江苏&#x27;</span>, <span class="hljs-string">&#x27;2020-11-01&#x27;</span>),<br>       (<span class="hljs-number">14</span>, <span class="hljs-string">&#x27;14&#x27;</span>, <span class="hljs-string">&#x27;灭绝&#x27;</span>, <span class="hljs-string">&#x27;女&#x27;</span>, <span class="hljs-number">65</span>, <span class="hljs-string">&#x27;123456719012345670&#x27;</span>, <span class="hljs-string">&#x27;西安&#x27;</span>, <span class="hljs-string">&#x27;2019-05-01&#x27;</span>),<br>       (<span class="hljs-number">15</span>, <span class="hljs-string">&#x27;15&#x27;</span>, <span class="hljs-string">&#x27;胡青生&#x27;</span>, <span class="hljs-string">&#x27;男&#x27;</span>, <span class="hljs-number">70</span>, <span class="hljs-string">&#x27;12345674971234567X&#x27;</span>, <span class="hljs-string">&#x27;西安&#x27;</span>, <span class="hljs-string">&#x27;2018-04-01&#x27;</span>),<br>       (<span class="hljs-number">16</span>, <span class="hljs-string">&#x27;16&#x27;</span>, <span class="hljs-string">&#x27;周芷若&#x27;</span>, <span class="hljs-string">&#x27;女&#x27;</span>, <span class="hljs-number">18</span>, <span class="hljs-keyword">null</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-string">&#x27;2012-06-01&#x27;</span>);<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -346,7 +331,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  <a href="/categories/MySQL/" class="category-chain-item">MySQL</a>
   
   
 
@@ -361,7 +346,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Java%E5%9F%BA%E7%A1%80/">#Java基础</a>
+        <a href="/tags/MySQL/">#MySQL</a>
       
     </div>
   
@@ -373,8 +358,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Java中的字符串</div>
-      <div>http://example.com/2022/09/12/Java中的字符串/</div>
+      <div>MySQL</div>
+      <div>http://example.com/2023/03/26/MySQL/</div>
     </div>
     <div class="license-meta">
       
@@ -386,7 +371,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月12日</div>
+          <div>2023年3月26日</div>
         </div>
       
       
@@ -418,18 +403,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/17/Java%E9%9B%86%E5%90%88/" title="Java集合">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Java集合</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/11/Java%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="Java基本数据类型">
-                        <span class="hidden-mobile">Java基本数据类型</span>
+                      <a href="/2022/11/01/Spring%20Framework/" title="Spring Framework">
+                        <span class="hidden-mobile">Spring Framework</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
